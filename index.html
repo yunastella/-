@@ -67,7 +67,7 @@ blockquote p{font:.9rem/1.7 "Gowun Dodum",sans-serif;color:var(--dim);margin-top
 .shops{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem;margin-top:2rem;font-size:.95rem}
 .shops p{padding:.8rem 1rem;background:rgba(255,255,255,.04);border-radius:6px}
 .shops b{color:var(--gold)}
-.mg{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.mg{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
 .mgbox{border:1px solid var(--ac,var(--gold));border-radius:8px;padding:1.6rem;background:linear-gradient(160deg,color-mix(in srgb,var(--ac,#fff) 18%,var(--deep)),var(--deep))}
 .mgbox h3{color:var(--ac)}
 .evil .card{border-color:rgba(224,88,63,.45);background:linear-gradient(#26122a,#17102b)}
@@ -140,7 +140,7 @@ footer{text-align:center;padding:3rem 1rem;color:var(--dim);border-top:1px solid
 <h2>마법 체계</h2>
 <p class="lead">불·물·땅·금속·빛·어둠 여섯 속성. 마법사 과정까지는 전반을 배우고, 마도사 과정부터 전문 속성을 고른다.</p>
 <div class="tabs" id="mgTabs"></div>
-<div class="mg"><div class="ph tall" id="mgImg" style="max-width:300px">이미지 영역</div><div class="mgbox" id="mgBox"></div></div>
+<div class="mg"><div class="mgbox" id="mgBox"></div></div>
 </section>
 
 <section id="cast">
@@ -190,6 +190,7 @@ const IMG={
  "캄푸스":"images/campus.webp",
  "판타즈마 (북서부)":"images/phantasma.webp",
  "사교도 본거지 (북부)":"images/north-base.webp",
+ "가온":"images/gaon.webp"
  "아라":"images/ara.webp",
 };
 const pic=k=>IMG[k]?`<img src="${IMG[k]}" alt="${k}" loading="lazy" decoding="async" onerror="this.remove()">`:"";
@@ -224,7 +225,7 @@ const fb=$("#floors");F.forEach(([n],i)=>{const b=el("button","",n);b.type="butt
 
 /* 마법 */
 const M=[["불","--fire","파괴력이 좋은 공격형. 다루기 까다로워 술자의 역량을 많이 탄다.","스파크 루크바트"],["물","--water","공격과 방어 양면에 쓴다. 불보다 쉽고 땅보다 어렵다.","워티스 안타레스"],["땅","--earth","지맥의 힘을 빌리는 가장 대중적인 마법. 방어와 응급처치에 강하고 공격에도 쓸 수 있다.","세라 베텔게우스"],["금속","--metal","물체 강화에 특화. 공예가와 제작자용이며 공격·방어에는 비효율적이다.","티포 데네브"],["빛","--light","치료마법 대부분이 빛속성. 대전쟁 이후 공격·방어·지원으로도 발전했다. 가온의 시간 마법도 빛속성이다.","루나 스피카"],["어둠","--dark","모든 마법이 공격마법. 파괴력 큰 대규모 마법이 많지만 난이도는 최상이다.","솔라 알레샤"]];
-tabs($("#mgTabs"),M.map(m=>m[0]),i=>{const [n,v,d,t]=M[i],c=`var(${v})`;$("#mgBox").style.setProperty("--ac",c);$("#mgBox").innerHTML=`<h3>${n}속성</h3><p>${d}</p><p style="margin-top:.8rem;color:var(--dim)">담당 교사 · ${t}</p>`;$("#mgImg").style.setProperty("--c",c);$("#mgImg").innerHTML="이미지 영역"+pic(n)});
+tabs($("#mgTabs"),M.map(m=>m[0]),i=>{const [n,v,d,t]=M[i],c=`var(${v})`;$("#mgBox").style.setProperty("--ac",c);$("#mgBox").innerHTML=`<h3>${n}속성</h3><p>${d}</p><p style="margin-top:.8rem;color:var(--dim)">담당 교사 · ${t}</p>`});
 
 /* 인물 */
 const P={
