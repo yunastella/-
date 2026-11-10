@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>대륙 플란타지 · 마법학교 셀레스티스</title>
+<meta name="description" content="마법학교 셀레스티스와 대륙 플란타지의 세계관, 인물, 이야기를 소개합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+:root{--night:#12112a;--deep:#1b1940;--ink:#0b0a1c;--paper:#efe6d2;--dim:#b8b2cf;--gold:#e8c77a;--fire:#e0583f;--water:#5fb3c4;--earth:#9c7a4f;--metal:#aab4c2;--light:#fff0a8;--dark:#8a6fd1;--line:rgba(232,199,122,.25)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--paper);font:17px/1.8 "Gowun Dodum",system-ui,sans-serif;word-break:keep-all;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:"Nanum Myeongjo",serif;line-height:1.35}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+nav{position:sticky;top:0;z-index:20;display:flex;gap:1.2rem;justify-content:center;padding:.8rem 1rem;background:rgba(18,17,42,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav a{text-decoration:none;color:var(--dim);font-size:.95rem}
+nav a:hover{color:var(--gold)}
+section{padding:5rem 1.25rem;max-width:1040px;margin:auto}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:.6rem;color:var(--gold)}
+.lead{color:var(--dim);max-width:40em;margin-bottom:2rem}
+#hero{position:relative;min-height:92vh;display:grid;place-items:center;text-align:center;max-width:none;padding:4rem 1.25rem;background:radial-gradient(ellipse at 70% 20%,#3a2f7a 0,transparent 55%),linear-gradient(#12112a,#1b1940 70%,#12112a)}
+#sky{position:absolute;inset:0;width:100%;height:100%}
+.hero-in{position:relative;max-width:720px}
+.hero-in h1{font-size:clamp(2.6rem,9vw,5.4rem);font-weight:800;letter-spacing:.04em;text-shadow:0 0 40px rgba(232,199,122,.35)}
+.hero-in .sub{font-size:clamp(1.05rem,3vw,1.35rem);color:var(--gold);margin:.5rem 0 1.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:2rem}
+.chips span{border:1px solid var(--line);border-radius:99px;padding:.15rem .9rem;font-size:.9rem;color:var(--dim)}
+.rumor{font-style:italic;color:var(--paper);opacity:.85;margin-bottom:2rem}
+.btn{display:inline-block;padding:.75rem 1.8rem;border:1px solid var(--gold);color:var(--gold);text-decoration:none;border-radius:4px;transition:.25s}
+.btn:hover{background:var(--gold);color:var(--ink)}
+.star{position:absolute;right:12%;top:14%;width:14px;height:14px;background:var(--light);border-radius:50%;box-shadow:0 0 30px 12px rgba(255,240,168,.6);animation:rise 6s ease-out both}
+@keyframes rise{from{transform:translate(120px,260px) scale(.3);opacity:0}to{transform:none;opacity:1}}
+.tl{border-left:2px solid var(--line);padding-left:1.5rem;display:grid;gap:2rem}
+.tl h3{color:var(--paper);font-size:1.25rem}
+.tl small{color:var(--gold)}
+blockquote{margin:2rem 0 0;padding:1.5rem;border:1px solid var(--line);background:var(--deep);border-radius:6px;font-family:"Nanum Myeongjo",serif;font-size:1.15rem}
+blockquote p{font:.9rem/1.7 "Gowun Dodum",sans-serif;color:var(--dim);margin-top:.8rem}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.tabs button{font:inherit;background:none;color:var(--dim);border:1px solid var(--line);border-radius:99px;padding:.35rem 1.1rem;cursor:pointer;transition:.2s}
+.tabs button[aria-pressed=true]{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:1.1rem}
+.card{background:var(--deep);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.card .b{padding:1rem 1.1rem 1.2rem;font-size:.95rem}
+.card h3{font-size:1.15rem;margin-bottom:.2rem}
+.card em{font-style:normal;color:var(--gold);font-size:.85rem;display:block;margin-bottom:.4rem}
+.ph{aspect-ratio:4/3;display:grid;place-items:center;color:rgba(255,255,255,.55);font-size:.85rem;background:linear-gradient(135deg,var(--c,#444),var(--ink));position:relative;overflow:hidden}
+.ph::before{content:"";position:absolute;inset:10px;border:1px dashed rgba(255,255,255,.25);border-radius:4px}
+.ph.tall{aspect-ratio:3/4}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.ph:has(img){color:transparent}
+.ph:has(img)::before{display:none}
+.north{display:grid;gap:1rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--line)}
+.wall{color:var(--dim);margin-bottom:1rem}
+.school{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:2rem;align-items:start}
+.floors{display:grid;gap:4px}
+.floors button{font:inherit;text-align:left;padding:.7rem 1rem;color:var(--paper);background:var(--deep);border:1px solid var(--line);border-radius:4px;cursor:pointer;transition:.2s}
+.floors button:hover{border-color:var(--gold)}
+.floors button[aria-pressed=true]{background:#2a2663;border-color:var(--gold);transform:translateX(8px)}
+.floorbox{background:var(--deep);border:1px solid var(--line);border-radius:8px;padding:1.5rem;min-height:230px}
+.floorbox h3{color:var(--gold);margin-bottom:.6rem}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2.5rem}
+.rules div{border-left:2px solid var(--gold);padding-left:1rem;font-size:.95rem}
+.shops{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.8rem;margin-top:2rem;font-size:.95rem}
+.shops p{padding:.8rem 1rem;background:rgba(255,255,255,.04);border-radius:6px}
+.shops b{color:var(--gold)}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.mgbox{border:1px solid var(--ac,var(--gold));border-radius:8px;padding:1.6rem;background:linear-gradient(160deg,color-mix(in srgb,var(--ac,#fff) 18%,var(--deep)),var(--deep))}
+.mgbox h3{color:var(--ac)}
+.evil .card{border-color:rgba(224,88,63,.45);background:linear-gradient(#26122a,#17102b)}
+.evil .card em{color:#ff8b73}
+footer{text-align:center;padding:3rem 1rem;color:var(--dim);border-top:1px solid var(--line);font-size:.9rem}
+@media(max-width:720px){section{padding:3.5rem 1.1rem}.school,.mg{grid-template-columns:1fr}.floors button[aria-pressed=true]{transform:none}.star{right:10%;top:9%}.ph.tall{aspect-ratio:4/5}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="목차"><a href="#world">세계</a><a href="#geo">지리</a><a href="#school">학교</a><a href="#magic">마법</a><a href="#cast">인물</a><a href="#evil">악마의 사제</a></nav>
+
+<header id="hero">
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="star" aria-hidden="true"></div>
+<div class="hero-in">
+<p class="sub">마법학교 셀레스티스</p>
+<h1>대륙 플란타지</h1>
+<div class="chips"><span>판타지</span><span>서양풍</span><span>성장</span><span>일상</span><span>액션</span><span>모험</span></div>
+<p class="rumor">“대륙 플란타지는 곧 멸망할 것이다.”<br>300년의 평화 끝에, 불길한 소문이 퍼지고 있다.</p>
+<a class="btn" href="#world">이야기 속으로</a>
+</div>
+</header>
+
+<section id="world">
+<h2>대륙 플란타지</h2>
+<p class="lead">사악한 신을 따르는 세력과 마법사를 중심으로 한 인간이 대립해 온 세계. 300년 전 플란타지 대전쟁을 마지막으로 평화가 이어졌다.</p>
+<div class="tl">
+<div><small>300년 전</small><h3>플란타지 대전쟁</h3><p>악마의 사제와 인간의 대규모 전쟁. 인간이 승리한 뒤 대륙 중앙평원에 셀레스티스 마법학교가 세워졌다. 하지만 완전한 승리는 아니었다. 사제 수장 아자젤의 힘을 빼앗아 봉인하고 남부를 겨우 지켰을 뿐, 북부는 사교도에게 넘어갔다. 인간들은 남부를 지키려 북부를 봉인했고, 긴 세월 속에 기록은 사라졌다.</p></div>
+<div><small>지금</small><h3>봉인이 풀리고 있다</h3><p>북부 봉인이 풀리고 있다는 소식이 한 사절을 통해 도착했다.</p></div>
+</div>
+<blockquote>“북쪽에서 가장 환한 별이 동쪽에 뜨는 날 태어나는 아이가 대마법사의 후계자가 될 것이다.”<p>출처를 알 수 없는 예언. 지금까지 정설로 통하지만 진위는 불분명하다. 예언이 꼭 정답일까? </p></blockquote>
+</section>
+
+<section id="geo">
+<h2>지리</h2>
+<div class="tabs" id="geoTabs"></div>
+<div class="grid" id="geoGrid"></div>
+<p class="wall" id="geoNote"></p>
+</section>
+
+<section id="gaon">
+<h2>가온과 아라</h2>
+<div class="grid">
+<div class="card"><div class="ph" data-img="가온" style="--c:#3d5a80">이미지 영역</div><div class="b"><h3>가온</h3><em>북동부의 연합국가</em>고유 마법으로 이름을 날린 나라. 가장 강력한 유산은 시간 마법으로, 악마의 사제 세력을 패전 직전까지 몰아붙인 적이 있다. 아자젤과 북부의 봉인에도 이 마법이 쓰였다. 남부에는 가온계 복식과 이름이 남아 있지만 마법과 기술은 대부분 소실되었다. 흰 진돗개도 옛 북동부의 희귀종이다.</div></div>
+<div class="card"><div class="ph" data-img="아라" style="--c:#b89b3e">이미지 영역</div><div class="b"><h3>아라</h3><em>가온 연맹의 유일한 현존국</em>봉인 너머에 남아 고유한 전략전술과 마법으로 사교도와 싸워 왔다. 정부 직할 사관학교 ‘미르’에서 검사·궁사·마법사를 기르며 분위기는 빡빡한 편이다. 빛속성 친화력을 타고난 사람이 많다.</div></div>
+</div>
+</section>
+
+<section id="school">
+<h2>마법학교 셀레스티스</h2>
+<p class="lead">대마법사 셀레스티엘이 “누구나 자신의 몸을 지킬 기본적인 마법은 쓸 수 있게 하겠다”는 신조로 세웠다. 여러 나라에서 사람이 모여 분위기가 자유분방하다.</p>
+<p class="lead"><b>커리큘럼</b> 견습 마법사 → 마법사 → 마도사 → 대마법사. 일반 학생은 마법사까지 배우고 졸업하며, 마법사로 살려는 학생이 마도사로 올라간다. 대마법사 과정은 시험날마다 곡소리가 난다.</p>
+<div class="school">
+<div class="floors" id="floors" role="group" aria-label="본관 층 선택"></div>
+<div class="floorbox" id="floorbox" aria-live="polite"></div>
+</div>
+<h3 style="margin:3rem 0 .5rem;color:var(--gold)">상점가</h3>
+<div class="shops" id="shops"></div>
+<h3 style="margin:3rem 0 .5rem;color:var(--gold)">교칙 (견습 마법사 기준)</h3>
+<div class="rules">
+<div><b>통금</b><br>오후 9시. 마법사 12시, 마도사 2시, 대마법사는 제한 없음. 위반하면 벌점 폭탄으로 방학에도 학교에 남는다.</div>
+<div><b>마법재료 창고</b><br>접근 금지. 잘못 건드리면 위험하다. 특히 불마법 재료.</div>
+<div><b>하루의 시작</b><br>아침 8시 알람과 사감 선생님의 기상 순회, 9시 수업 시작.</div>
+<div><b>브로치</b><br>학교 문양이 새겨진 은색 브로치. 학교로 돌아오는 순간이동 기능이 있다.</div>
+</div>
+</section>
+
+<section id="magic">
+<h2>마법 체계</h2>
+<p class="lead">불·물·땅·금속·빛·어둠 여섯 속성. 마법사 과정까지는 전반을 배우고, 마도사 과정부터 전문 속성을 고른다.</p>
+<div class="tabs" id="mgTabs"></div>
+<div class="mg"><div class="ph tall" id="mgImg" style="max-width:300px">이미지 영역</div><div class="mgbox" id="mgBox"></div></div>
+</section>
+
+<section id="cast">
+<h2>등장인물</h2>
+<div class="tabs" id="castTabs"></div>
+<div class="grid" id="castGrid"></div>
+</section>
+
+<section id="evil" class="evil">
+<h2>악마의 사제</h2>
+<p class="lead">사악한 신을 믿으며 대륙을 악신에게 바치려는 사교도 집단. 대악마 아자젤을 중심으로 뭉쳤다.</p>
+<div class="grid" id="evilGrid"></div>
+</section>
+
+<footer>마법학교 셀레스티스 · 대륙 플란타지<br>이미지는 추후 교체될 Placeholder입니다.</footer>
+
+<script>
+const $=s=>document.querySelector(s),el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!==undefined)e.innerHTML=h;return e};
+
+/* ===== 이미지 연결 =====
+   "이름":"파일 경로" 형태로 적으면 해당 칸의 Placeholder가 이미지로 바뀝니다.
+   - 비워 두면 Placeholder가 그대로 보이고, 파일이 없거나 경로가 틀려도 Placeholder로 돌아갑니다.
+   - 경로는 images/파일명.webp 처럼 상대경로로, 대소문자까지 정확히 적어 주세요.
+   - 이름은 화면에 표시되는 이름과 같아야 합니다. (인물 이름, 지리 장소 이름, "가온", "아라", 마법 속성은 "불" "물" "땅" "금속" "빛" "어둠")
+   - 권장 비율: 인물·마법 속성 3:4 (예: 600×800), 나머지 4:3 (예: 800×600) */
+const IMG={
+ "윤 가람":"images/garam.webp",
+ "가온":"images/gaon.webp",
+ "불":"images/fire.webp",
+};
+const pic=k=>IMG[k]?`<img src="${IMG[k]}" alt="${k}" loading="lazy" decoding="async" onerror="this.remove()">`:"";
+const ph=(c,t,k)=>`<div class="ph" style="--c:${c}">${t||"이미지 영역"}${pic(k)}</div>`;
+
+/* 별하늘 */
+(()=>{const c=$("#sky"),x=c.getContext("2d");let w,h,S=[];
+const fit=()=>{w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;S=Array.from({length:Math.min(160,w/6)},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.4+.3,p:Math.random()*6}))};
+const draw=t=>{x.clearRect(0,0,w,h);S.forEach(s=>{x.globalAlpha=.45+.45*Math.sin(t/900+s.p);x.fillStyle="#fff6d6";x.beginPath();x.arc(s.x,s.y,s.r,0,7);x.fill()});if(!matchMedia("(prefers-reduced-motion:reduce)").matches)requestAnimationFrame(draw)};
+addEventListener("resize",fit);fit();requestAnimationFrame(draw)})();
+
+/* 탭 공통 */
+function tabs(box,names,fn,start=0){box.innerHTML="";names.forEach((n,i)=>{const b=el("button","",n);b.type="button";b.onclick=()=>{[...box.children].forEach(k=>k.setAttribute("aria-pressed",k===b));fn(i)};box.append(b)});box.children[start].click()}
+
+/* 지리 */
+const G={
+"남부 (알려진 대륙)":{note:"마법학교 셀레스티스를 중심으로 명목상 국가연합을 이루고 있다. 300년의 평화 속에 연합은 거의 형식뿐이다.",items:[
+["셀레스티스","대륙 중앙평원의 작은 마을. 마법학교가 있는 남부 플란타지의 중심지.","#4b3f9e"],
+["이그니스","사막 한가운데 오아시스를 중심으로 세운 도시. 플란타지에서 가장 부유하고 건물이 화려하다. 불속성 친화력을 타고난 사람이 많다.","#c4502f"],
+["아스트라","고지대의 서늘한 도시. 도시 경계를 따라 강이 흐르고 별과 가까운 곳이라 불린다. 물속성 친화력이 흔하다.","#3f8ea3"],
+["캄푸스","맑은 하늘과 선선한 바람, 푸른 밀밭. 날씨가 가장 좋고 가장 넓은 곡창지대를 가졌다.","#8a9a3f"]]},
+"북부 (봉인 지역)":{note:"금단의 벽 너머. 사교도에게 점령당한 뒤 통째로 봉인되었다. 마법을 걷어낼 수 있다면 지금도 갈 수 있다.",items:[
+["판타즈마 (북서부)","옛 기사 왕국. 대전쟁에서 패해 주민이 몰살당했고, 저주로 유령이 되어서도 끝없이 싸우는 중이다. 벨리알이 봉인된 곳. 본래 어둠속성 친화력이 흔하다.","#3b2f63"],
+["사교도 본거지 (북부)","아자젤은 봉인 중이지만 군단장 카니에르를 중심으로 군단이 자리 잡고 있다.","#5a1f2e"],
+["가온의 터 (북동부)","아라·라온·미리내 세 나라가 맹주였던 연맹. 대전쟁의 최전선이 되어 큰 피해를 입었고 현존 국가는 아라뿐이다. 봉인 너머에서 300년째 사교도와 싸운다.","#355a7d"]]}};
+tabs($("#geoTabs"),Object.keys(G),i=>{const k=Object.keys(G)[i],g=$("#geoGrid");g.innerHTML="";G[k].items.forEach(([n,d,c])=>g.append(el("div","card",ph(c,"",n)+`<div class="b"><h3>${n}</h3>${d}</div>`)));$("#geoNote").textContent=G[k].note});
+
+/* 학교 */
+const F=[["5층","교장실, 전망대"],["4층","대마도사 교실, 연구실. 펑펑 터지는 소리가 자주 들린다는 소문이 있다."],["3층","마도사 교실, 재료실, 상시 개방 연습실"],["2층","빛·어둠속성 교실, 마법사 교실, 보건실"],["1층","입구, 홀, 화장실, 견습 마법사 교실, 불·물·땅속성 교실"],["지하","식당, 식량창고, 잡화창고, 금속속성 실습실(대장간 느낌). 잡화창고 뒤편 문 너머의 관리 안 된 긴 계단이 지하 던전으로 이어지며, 계단 중간에 룬 방어 장치가 있다."]];
+const fb=$("#floors");F.forEach(([n],i)=>{const b=el("button","",n);b.type="button";b.onclick=()=>{[...fb.children].forEach(k=>k.setAttribute("aria-pressed",k===b));$("#floorbox").innerHTML=`<h3>본관 ${F[i][0]}</h3><p>${F[i][1]}</p><p style="margin-top:1rem;color:var(--dim);font-size:.9rem">부속 건물: 도서관(플란타지 최대급), 기숙사</p>`};fb.append(b)});fb.children[4].click();
+[["우체국","말하는 새들이 우편가방을 메고 다닌다. 흰 올빼미 넬라가 우편 총괄, 하얀 토끼인형 셀라가 금전 업무를 맡아 은행 역할도 한다."],["마법도구점","지팡이를 비롯한 마법 보조도구. 책, 수정구슬, 만년필 등 다양한 형태가 있다."],["인형 보호소","버려진 인형과 동물을 보호하고 입양한다. 입양 계약서는 필수, 버리면 무시무시한 위약금이 따른다."],["텔레포트 가게","마녀 바바라가 운영한다. 이동 비용이 비싸다."],["카페 센트럴","대륙의 모든 소문이 모이는 곳. 음식이 맛있고 밤에는 식사류와 주류도 판다. 주인은 리나."],["여러 식당","입구에서 학교까지 이어진 다리 옆 상점가에 자리한다."]].forEach(([n,d])=>$("#shops").append(el("p","",`<b>${n}</b><br>${d}`)));
+
+/* 마법 */
+const M=[["불","--fire","파괴력이 좋은 공격형. 다루기 까다로워 술자의 역량을 많이 탄다.","스파크 루크바트"],["물","--water","공격과 방어 양면에 쓴다. 불보다 쉽고 땅보다 어렵다.","워티스 안타레스"],["땅","--earth","지맥의 힘을 빌리는 가장 대중적인 마법. 방어와 응급처치에 강하고 공격에도 쓸 수 있다.","세라 베텔게우스"],["금속","--metal","물체 강화에 특화. 공예가와 제작자용이며 공격·방어에는 비효율적이다.","티포 데네브"],["빛","--light","치료마법 대부분이 빛속성. 대전쟁 이후 공격·방어·지원으로도 발전했다. 가온의 시간 마법도 빛속성이다.","루나 스피카"],["어둠","--dark","모든 마법이 공격마법. 파괴력 큰 대규모 마법이 많지만 난이도는 최상이다.","솔라 알레샤"]];
+tabs($("#mgTabs"),M.map(m=>m[0]),i=>{const [n,v,d,t]=M[i],c=`var(${v})`;$("#mgBox").style.setProperty("--ac",c);$("#mgBox").innerHTML=`<h3>${n}속성</h3><p>${d}</p><p style="margin-top:.8rem;color:var(--dim)">담당 교사 · ${t}</p>`;$("#mgImg").style.setProperty("--c",c);$("#mgImg").innerHTML="이미지 영역"+pic(n)});
+
+/* 인물 */
+const P={
+"교직원":[["리르 폴라리스","교장 · INFJ 1w2","대륙 최고의 마법사. 자애롭고 위엄 있으나 훈화가 길다. 머리 모양을 자주 바꾸고 만화를 남몰래 좋아한다. 셀레스티스 태생.","#6a4fb5"],["루나 스피카","빛속성 · 보건교사 보조 · ENFJ 2w1","금발녹안의 엘프. 상냥하고 학생을 최우선으로 지키는 최고 실력자이자 차기 교장 후보. 알려지지 않은 곳에서 왔다.","#d9c15a"],["워티스 안타레스","물속성 · ENTP 7w6","청발청안, 아스트라 출신. 소문난 덜렁이.","#3f8ea3"],["스파크 루크바트","불속성 · ESTP 8w7","적발적안, 이그니스 출신. 불같은 성격에 훈련을 좋아한다.","#c4502f"],["세라 베텔게우스","땅속성 · ISFP 9w1","갈발갈안, 캄푸스 출신. 평화를 좋아하고 잠이 많다.","#8a6b3f"],["티포 데네브","금속속성 · INTP 5w4","백발흑안, 캄푸스 출신. 괴짜 무기 개발자.","#8c97a8"],["솔라 알레샤","어둠속성 · INTJ 5w6","흑발흑안, 아스트라 출신. 말수가 적은 과묵한 성격.","#4a3a7a"]],
+"학생":[["앨리스 알타이르","학생회장 · ENFP 7w8","백금발벽안, 아스트라 출신. 씩씩하고 장난기 많고 목소리가 낭랑하다. 학생회실에서 이불 깔고 낮잠 자다 곧잘 들킨다. 마도사 과정 재학 중.","#5aa0d8"],["힐 베가","부회장 · ISFJ 6w5","적발금안, 이그니스 출신. 앨리스보다 차분하고 투닥거려도 단짝이다. 마도사 과정 재학 중.","#c4502f"],["제니","견습 마법사 · 9세","붉은 머리 트윈테일, 캄푸스 출신. 겁은 많지만 소문 수집을 좋아한다.","#d46a6a"]],
+"가온 출신":[["윤 가람","사관학교 미르 생도 · 17세 · ISTJ 1번","흑발벽안, 아라 출신. 북부 봉인이 풀리고 있음을 알리러 파견되었고, 벨리알의 세력에게 쫓기다 학생회와 교사들에게 구조되었다. 무뚝뚝하지만 다정하고 예의 바르며 시간마법을 쓴다. 도서관에 자주 나타난다.","#2f6fa8"],["백호","흰 진돗개","윤가람의 펫. 주인이 바쁘면 인형 보호소에서 지낸다. 사람을 좋아한다.","#e8e4d8"]],
+"마을 사람들":[["마녀 바바라","텔레포트 가게 · ISTP 8w9","퉁명스럽지만 정 많은 할머니. 북부와 가온에 대해 알고 있다. 셀레스티스 태생.","#6b4f7a"],["리나 플리에","카페 센트럴 주인","핑크 머리 미인. 정보에 빠삭하다.","#e08aa8"],["넬라와 셀라","우체국","흰 올빼미 넬라는 우편 총괄, 하얀 토끼인형 셀라는 금전 업무 담당.","#a9b3d6"]]};
+const card=([n,r,d,c])=>el("div","card",ph(c,"인물 이미지",n).replace('class="ph"','class="ph tall"')+`<div class="b"><h3>${n}</h3><em>${r}</em>${d}</div>`);
+tabs($("#castTabs"),Object.keys(P),i=>{const g=$("#castGrid");g.innerHTML="";P[Object.keys(P)[i]].forEach(p=>g.append(card(p)))});
+[["아자젤","수장 · 봉인 중","기묘한 힘을 지녔으나 대전쟁에서 힘을 빼앗기고 봉인되었다.","#4a1a3a"],["벨리알","군단장 · ENTJ 8w7","적발적안의 여성. 막강한 불마법과 영혼을 빼앗는 능력을 쓴다. 시종일관 여유롭고 능글맞은 말투를 유지하는 절대악. 북서부 판타즈마에서 암약 중이다.","#7a1f1f"],["카니에르","군단장","자색 머리 적안. 북부 본거지를 지키며 명령대로만 움직이는 기계 같은 간부.","#3d1f5c"]].forEach(p=>$("#evilGrid").append(card(p)));
+
+/* HTML에 직접 적힌 이미지 칸(가온·아라) */
+document.querySelectorAll("[data-img]").forEach(e=>e.insertAdjacentHTML("beforeend",pic(e.dataset.img)));
+</script>
+</body>
+</html>
