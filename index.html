@@ -167,9 +167,30 @@ const $=s=>document.querySelector(s),el=(t,c,h)=>{const e=document.createElement
    - 이름은 화면에 표시되는 이름과 같아야 합니다. (인물 이름, 지리 장소 이름, "가온", "아라", 마법 속성은 "불" "물" "땅" "금속" "빛" "어둠")
    - 권장 비율: 인물·마법 속성 3:4 (예: 600×800), 나머지 4:3 (예: 800×600) */
 const IMG={
- "윤 가람":"images/garam.webp",
- "가온":"images/gaon.webp",
- "불":"images/fire.webp",
+  "윤 가람":"images/garam.webp",
+ "리르 폴라리스":"images/lir.webp",
+ "루나 스피카":"images/luna.webp",
+ "워티스 안타레스":"images/wattis.webp",
+ "스파크 루크바트":"images/spark.webp",
+ "세라 베텔게우스":"images/sera.webp",
+ "티포 데네브":"images/tipo.webp",
+ "솔라 알레샤":"images/sola.webp",
+ "앨리스 알타이르":"images/alice.webp",
+ "힐 베가":"images/hill.webp",
+ "제니":"images/jenny.webp",
+ "백호":"images/baekho.webp",
+ "마녀 바바라":"images/barbara.webp",
+ "리나 플리에":"images/lina.webp",
+ "넬라와 셀라":"images/nella.webp",
+ "벨리알":"images/belial.webp",
+ "카니에르":"images/kanier.webp",
+ "셀레스티스":"images/celestis.webp",
+ "이그니스":"images/ignis.webp",
+ "아스트라":"images/astra.webp",
+ "캄푸스":"images/campus.webp",
+ "판타즈마 (북서부)":"images/phantasma.webp",
+ "사교도 본거지 (북부)":"images/north-base.webp",
+ "아라":"images/ara.webp",
 };
 const pic=k=>IMG[k]?`<img src="${IMG[k]}" alt="${k}" loading="lazy" decoding="async" onerror="this.remove()">`:"";
 const ph=(c,t,k)=>`<div class="ph" style="--c:${c}">${t||"이미지 영역"}${pic(k)}</div>`;
